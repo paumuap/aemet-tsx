@@ -31,7 +31,7 @@ export default function App() {
       // let API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwLmxpbmFnZXJtYW5AZ21haWwuY29tIiwianRpIjoiMmNkMmM1MWUtMmE0Yi00ZTQyLWE4NWMtZGFmNDMyYTMxNTRlIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE3NDIzMTY2NjQsInVzZXJJZCI6IjJjZDJjNTFlLTJhNGItNGU0Mi1hODVjLWRhZjQzMmEzMTU0ZSIsInJvbGUiOiIifQ.3ghxt5xFpfy4dgQLGw8_j2JiKHUDIayFoQKtqsar4XE";
       const details = await fetch(response.datos);
       const data = await details.json();
-      const taguas = data[0].prediccion.dia.map(dia => dia.tAgua.valor1);
+      const taguas = data[0].prediccion.dia.map((dia:any) => dia.tAgua.valor1);
 
       setDetails(data);
       setAguas(taguas);
