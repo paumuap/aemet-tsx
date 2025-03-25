@@ -23,6 +23,8 @@ export default function App() {
       console.error("Error fetching data:", error);
       setErrorResponse(error instanceof Error ? error : new Error("Unknown error occurred"));
       setResponse(null);
+      setDetails(null);
+      setAguas(null);
     }
   };
 
